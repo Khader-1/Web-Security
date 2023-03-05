@@ -15,5 +15,5 @@
 # * [XSSCookiesHolder](./XSSCookiesHolder/)
 
 ## Online Demo
-# * [chatApp](https://chat.khader.atyaf.co/)
-# * [XSSCookiesHolder](https://khader.atyaf.co/)
+# * [chatApp](https://chat.khader.atyaf.cloud/)
+# * [XSSCookiesHolder](https://khader.atyaf.cloud/)
