@@ -30,6 +30,7 @@
 ## Discussion
 
 > Insecure Code:
+> This code creates a new chat message and sends it to a recipient, and also publishes the message to a channel for real-time delivery.
 >
 > > ![alt](./photo_2023-03-05_23-58-06.jpg)
 
@@ -38,3 +39,13 @@
 > Secure Code:
 >
 > > ![alt](./photo_2023-03-05_23-58-12.jpg)
+
+htmlentities() is a built-in PHP function that converts special characters to their corresponding HTML entities. This function is useful for preventing cross-site scripting (XSS) attacks by ensuring that user input containing HTML tags and special characters are properly encoded before being displayed on a web page.
+
+The htmlentities() function takes three mandatory parameters:
+
+1. $string (string): The input string to be encoded.
+2. $flags (integer): A set of flags that modify the behavior of the function. The most common flags used are ENT_QUOTES, which converts both double and single quotes, and ENT_HTML5, which encodes all characters in the input string.
+3. $encoding (string): The character encoding used in the input string. The default is "ISO-8859-1", but it is recommended to use "UTF-8" for better international support.
+
+- In the code example provided, htmlentities() is used to encode the message body and attachment title strings using the ENT_QUOTES flag and "UTF-8" encoding. This ensures that any special characters and quotes are properly encoded as HTML entities before being saved to the database or displayed on a web page. This helps to prevent XSS attacks that could be used to execute malicious scripts in the user's browser.
